@@ -4,27 +4,40 @@ using UnityEngine;
 
 public class launch : MonoBehaviour
 {
-   [SerializeField] int force = 90;
-    Rigidbody rb;
-    [SerializeField] GameObject ball;
-    Collider collider;
-    Vector3 cuurentangle;
+     [SerializeField] GameObject projectilePrefab;
+// Il punto in cui apparirà la bomba
+[SerializeField] Transform firePoint;
+// Tempo tra i lanci delle bombe
+
+// Forza di lancio
+[SerializeField] float launchForce = 5000f;
     // Start is called before the ggfirst frame update
     void Start()
     {
-      rb =   GetComponent<Rigidbody>();
-      collider = GetComponent<Collider>();
-      GetComponent<GameObject>();
+      
+      
+      
+      
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
-        {  
-            collider.isTrigger = true;
-        rb.AddForce(new Vector3(0,force,force), ForceMode.Impulse);
+        
+    Launch();
+    
+    }
+    void Launch()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+        GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        Rigidbody rb = proj.GetComponent<Rigidbody>();
+        rb.AddForce(firePoint.forward * launchForce);
+        Destroy(proj, 9f);
+
+       
         }
 
     }
