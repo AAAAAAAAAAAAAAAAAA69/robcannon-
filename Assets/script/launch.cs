@@ -26,10 +26,7 @@ public class launch : MonoBehaviour
     {
         
     Launch();
-    if(Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Transform.Rotate(0f,1f,0f);
-        }
+    
     
     }
     void Launch()

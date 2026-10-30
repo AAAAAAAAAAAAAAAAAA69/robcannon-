@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - 100point
+  - 80 point
+  - 60 point
+  - 50point
+  - 40 point
+  - 30 point
+  - 20 point
+  - 10point
   layers:
   - Default
   - TransparentFX
