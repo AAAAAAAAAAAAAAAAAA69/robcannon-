@@ -8,6 +8,7 @@ public class points : MonoBehaviour
     [SerializeField] GameObject ball;
     [SerializeField] TMP_Text Ptext;
     float pointcounter = 0f;
+    [SerializeField] GameObject[] cilindri;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,41 +23,48 @@ public class points : MonoBehaviour
     }
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.CompareTag("100point"))
+        for (int i = 0; i < cilindri.Length; i++)
+    {
+        // Controlla se il cilindro è nell'array
+        if (collider.gameObject == cilindri[i])
         {
-            pointcounter = pointcounter + 100;
-        }
-        else if(collider.gameObject.CompareTag("80 point"))
-        {
-            pointcounter = pointcounter + 80;
-        }
-        else if(collider.gameObject.CompareTag("60 point"))
-        {
-           pointcounter = pointcounter + 60;
-        }
-        else if(collider.gameObject.CompareTag("50point"))
-        {
-            pointcounter = pointcounter + 50;
-        }
-        else if(collider.gameObject.CompareTag("40 point"))
-        {
-            pointcounter = pointcounter+ 40;
-             Debug.Log("40 points");
-        }
-        else if(collider.gameObject.CompareTag("30 point"))
-        {
-            pointcounter = pointcounter + 30;
-             Debug.Log("30 points");
-        }
-        else if(collider.gameObject.CompareTag("20 point"))
-        {
-            pointcounter = pointcounter + 20;
-             Debug.Log("20 points");
-        }
-        else if(collider.gameObject.CompareTag("10point"))
-        {
-           pointcounter  = pointcounter + 10;
-           Debug.Log("10 points");
+            if (collider.CompareTag("100point"))
+            {
+                pointcounter += 100;
+            }
+            else if (collider.CompareTag("80 point"))
+            {
+                pointcounter += 80;
+            }
+            else if (collider.CompareTag("60 point"))
+            {
+                pointcounter += 60;
+            }
+            else if (collider.CompareTag("50point"))
+            {
+                pointcounter += 50;
+            }
+            else if (collider.CompareTag("40 point"))
+            {
+                pointcounter += 40;
+            }
+            else if (collider.CompareTag("30 point"))
+            {
+                pointcounter += 30;
+            }
+            else if (collider.CompareTag("20 point"))
+            {
+                pointcounter += 20;
+            }
+            else if (collider.CompareTag("10point"))
+            {
+                pointcounter += 10;
+            }
+
+            break;
         }
     }
+    }
+
 }
+
