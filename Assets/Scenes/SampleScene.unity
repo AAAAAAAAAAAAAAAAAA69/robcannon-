@@ -452,6 +452,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &92851513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3095934583552581644, guid: ffe0f6e2ee75f024c81e092ff386ab74, type: 3}
+  m_PrefabInstance: {fileID: 913369446}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &175396398
 GameObject:
   m_ObjectHideFlags: 0
@@ -48338,6 +48349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 398216100}
+  Ptext: {fileID: 92851513}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -48720,6 +48732,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4763606238434819365, guid: ffe0f6e2ee75f024c81e092ff386ab74, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763606238434819365, guid: ffe0f6e2ee75f024c81e092ff386ab74, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 227
+      objectReference: {fileID: 0}
     - target: {fileID: 6921524141729333125, guid: ffe0f6e2ee75f024c81e092ff386ab74, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -48803,6 +48823,14 @@ PrefabInstance:
     - target: {fileID: 7284456561187712543, guid: ffe0f6e2ee75f024c81e092ff386ab74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523112228117609081, guid: ffe0f6e2ee75f024c81e092ff386ab74, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523112228117609081, guid: ffe0f6e2ee75f024c81e092ff386ab74, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
